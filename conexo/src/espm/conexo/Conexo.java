@@ -27,7 +27,7 @@ public class Conexo {
 	}	
 	
 	public int calc() {
-		return 0 //superior()
+		return superior()
 			+ horizontal()
 			+ vertical();
 	}
@@ -61,6 +61,7 @@ public class Conexo {
 			for (int j = 0; j < M; j++) {
 				int dLocal = values[i][j] - values[i + 1][j];
 				h += (dRegion >= 0) ^ (dLocal < 0) ? 0 : 1;
+				// TODO: desconexão com niveis diferentes
 				dRegion = dLocal;
 			}
 		}
@@ -71,7 +72,7 @@ public class Conexo {
 		int v = 0;
 		for (int j = 0; j < M - 1; j++) {
 			for (int i = 0; i < N; i++) {
-				
+				// TODO
 			}
 		}
 		return v;
